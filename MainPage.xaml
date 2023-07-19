@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel ="clr-namespace:SegundoParcial.ViewModel"
+             x:DataType="viewmodel:MainViewModel"
+             x:Class="SegundoParcial.MainPage">
+
+
+    <Grid RowDefinitions="100, Auto, Auto, Auto, auto"
+          ColumnDefinitions=".75*, .25*"
+          RowSpacing="15"
+          ColumnSpacing="15"
+          Padding="15"
+          >
+        
+        <Image Source="emergency_call_svgrepo_com.png" Grid.ColumnSpan="2" />
+
+        <Entry Grid.Row="1" Placeholder="Titulo" Text="{Binding Title}"></Entry>
+        <Entry Grid.Row="2" Grid.ColumnSpan="2" Placeholder="Descripcion" Text="{Binding Description}"/>
+        <DatePicker Grid.Row="1" Grid.Column="1" DateSelected="DatePicker_DateSelected"></DatePicker>
+        <Button Clicked="Button_Clicked" Grid.Row="3" Grid.ColumnSpan="2" ImageSource="camera_add_svgrepo_com"></Button>
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Text="Llamadas registradas." Clicked="Button_Clicked_1">
+        </Button>
+    </Grid>
+
+</ContentPage>
