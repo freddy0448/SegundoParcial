@@ -1,14 +1,15 @@
-﻿
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SegundoParcial.ViewModel
 {
-
-    public partial class RegisterViewModel : ObservableObject
+    [ObservableObject]
+    public partial class RegisterViewModel
     {
         [ObservableProperty]
         string title;
-        
+
+        [ObservableProperty]
+        DateTime date;
 
         [ObservableProperty]
         string description;

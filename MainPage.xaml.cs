@@ -6,17 +6,12 @@ namespace SegundoParcial;
 
 public partial class MainPage : ContentPage
 {
-    private  IMediaPicker mediaPicker; //Propiedad del media picker
     RegisterViewModel viewModel;
 
-    public MainPage()
-    {
-    }
 
-    public MainPage(IMediaPicker mediaPicker, MainViewModel mainViewModel) //Inyeccion
-	{
-		InitializeComponent();
-        this.mediaPicker = mediaPicker; //Inicializacion
+    public MainPage(MainViewModel mainViewModel) //Inyeccion
+    {
+        InitializeComponent();
         BindingContext = mainViewModel;
     }
 
@@ -25,11 +20,13 @@ public partial class MainPage : ContentPage
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
-    private async void Button_Clicked(object sender, EventArgs e)
+    public async void Button_Clicked(object sender, EventArgs e)
     {
-        if (mediaPicker.IsCaptureSupported)
+
+        if (MediaPicker.Default.IsCaptureSupported)
         {
-            FileResult photo = await mediaPicker.CapturePhotoAsync();
+            FileResult photo = await MediaPicker.Default.CapturePhotoAsync();
+            photo.FileName = DateTime.Now.ToString("dd-MM-yyyy") + ".jpg";
             if (photo != null)
             {
                 string localFilePath = Path.Combine(FileSystem.CacheDirectory, photo.FileName); //localFilePath va a ser igual a la combinacion del directorio del cache con el nombre del archivo

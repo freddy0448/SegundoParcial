@@ -4,18 +4,12 @@
              x:Class="SegundoParcial.RegisterPage"
              xmlns:viewmodel ="clr-namespace:SegundoParcial.ViewModel"
              x:DataType="viewmodel:RegisterViewModel"
-             Title="RegisterPage">
+             Title="Emergencias Registradas">
 
     <Grid RowDefinitions="auto"
           ColumnDefinitions="auto"
           >
-        <Label HorizontalTextAlignment="Center" TextColor="White" FontFamily="bold" BackgroundColor="LightCoral" Text="Registros"/>
-        <CollectionView ItemsSource="{Binding Title}" SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="x:Type x:String">
-                    
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+        
+        
     </Grid>
 </ContentPage>

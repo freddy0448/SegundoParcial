@@ -17,11 +17,5 @@ namespace SegundoParcial.ViewModel
         [ObservableProperty]
         DateTime date;
 
-        [RelayCommand]
-        async Task Tap(string s)
-        {
-            await Shell.Current.GoToAsync(nameof(RegisterPage));
-        }
-
     }
 }
