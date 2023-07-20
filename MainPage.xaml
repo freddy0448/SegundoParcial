@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodel ="clr-namespace:SegundoParcial.ViewModel"
              x:DataType="viewmodel:MainViewModel"
-             x:Class="SegundoParcial.MainPage">
+             x:Class="SegundoParcial.MainPage"> <!--Freddy Villar-->
 
 
     <Grid RowDefinitions="100, Auto, Auto, Auto, auto"

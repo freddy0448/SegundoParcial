@@ -17,5 +17,5 @@ namespace SegundoParcial.ViewModel
         [ObservableProperty]
         DateTime date;
 
-    }
+    } //Freddy Villar
 }
